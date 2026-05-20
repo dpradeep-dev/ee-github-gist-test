@@ -21,4 +21,4 @@ jobs:
           context: src/
           file: ./dockerfile
           push: false
-          tags: github/github-gist-api:$(build.buildId)
+          tags: github/github-gist-api:latest
