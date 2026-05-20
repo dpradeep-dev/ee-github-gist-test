@@ -10,7 +10,7 @@ jobs:
         with:
           dotnet-version: '10.0.x'
       - name: Restore dependencies
-        run: dotnet restore --projects src/api
+        run: dotnet restore src/api/api.csproj
       - name: Build
         run: dotnet build --no-restore --configuration Release --projects src/api
       - name: Test
