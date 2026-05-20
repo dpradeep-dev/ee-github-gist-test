@@ -12,9 +12,9 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore src/api/api.csproj
       - name: Build
-        run: dotnet build --no-restore --configuration Release --projects src/api
+        run: dotnet build --no-restore --configuration Release src/api/
       - name: Test
-        run: dotnet test --no-restore --configuration Release --projects src/tests
+        run: dotnet test --no-restore --configuration Release src/tests/
       - name: Docker Build
         uses: docker/build-push-action@v2
         with:
